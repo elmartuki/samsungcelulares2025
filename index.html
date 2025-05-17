@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productos</title>
-    <meta name="author" content="Martuki">
+    <meta name="author" content="Martuki" />
 
     <style>
       /* * {
@@ -139,22 +139,20 @@
       }
 
       @keyframes animacion-productos {
-
-        0%{
+        0% {
           opacity: 0%;
           transform: scale(0.1);
         }
 
-        50%{
+        50% {
           opacity: 100%;
           transform: scale(1.02);
         }
 
-        100%{
+        100% {
           opacity: 100%;
           transform: scale(1);
         }
-        
       }
 
       /* .producto-img {
@@ -270,6 +268,100 @@
         padding: 7px 23px;
         background-color: rgba(255, 255, 255, 0.881);
         color: black;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .seccion-1 {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .seccion-2 {
+          width: 95%;
+          margin: auto;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          margin-bottom: 45px;
+        }
+
+        .presentacion-1 {
+          width: 100%;
+        }
+
+        .presentacion-2 {
+          width: 100%;
+          padding: 25px 0px;
+        }
+
+        .titulo-principal {
+          font-size: 35px;
+          color: rgba(0, 0, 0, 0.756);
+        }
+
+        .video {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          animation: videocelular 3s ease;
+        }
+
+        .producto {
+          display: flex;
+          flex-direction: column;
+          width: 170px;
+          color: white;
+          background-color: white;
+          border-radius: 10px;
+          box-shadow: 0px 0px 20px 10px #00000008;
+          animation-name: animacion-productos;
+          animation-duration: 0.8s;
+          animation-timing-function: ease;
+        }
+
+        .producto-texto {
+          font-size: 12px;
+        }
+
+        .producto-precio {
+          font-size: 12px;
+        }
+
+        .precio-sin-impuestos {
+          font-size: 12px;
+        }
+
+        .producto-imagen {
+          width: 170px;
+          height: 170px;
+          object-fit: cover;
+          transition: 1s;
+          cursor: pointer;
+        }
+
+        .btn-ver-mas {
+          background-color: rgb(255 255 255);
+          border: 2px solid rgb(229, 229, 229);
+          position: absolute;
+          left: 0;
+          bottom: -17px;
+          padding: 8px 20px;
+          border-radius: 20px;
+          cursor: pointer;
+          font-weight: 600;
+          box-shadow: 0px 0px 20px 10px #00000021;
+          transition: 0.5s;
+        }
+
+        @keyframes videocelular {
+          0% {
+            width: 0%;
+          }
+
+          100% {
+            width: 100%;
+          }
+        }
       }
     </style>
   </head>
